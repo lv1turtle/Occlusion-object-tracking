@@ -1,0 +1,1 @@
+tensorboard --logdir ./output/carla_train/cosine-softmax --port 7006

@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=3 python train_mars.py --mode=eval --batch_size=128  --dataset_dir=./DatasetForFRCNN --loss_mode=cosine-softmax --log_dir=./output/carla_train/ --run_id=cosine-softmax --eval_log_dir=./eval_output/carla
