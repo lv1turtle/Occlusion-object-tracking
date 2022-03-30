@@ -50,7 +50,8 @@ MOT17/
 
     Form of Imageset
     ```bash
-      image name : 6 digit frame number starting with 1, e.g.) 000001.jpg ~ 000600.jpg
+      image name : 6 digit frame number starting with 1
+      e.g.) 000001.jpg ~ 000600.jpg
     ```
   * Third, make the gt.txt with imageset
 
