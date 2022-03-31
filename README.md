@@ -71,8 +71,6 @@ MOT17/
     Fix the lines 134 in MegaDepth/demo_images_new.py
     ```bash
         images = sorted(glob.glob( " path of img1/*.jpg " ))
-        ex)
-          images = sorted(glob.glob("/home/adriv/detect-invisible/data/data1/img1/*.jpg"))
     ```
     
     Generate image_depth sets
