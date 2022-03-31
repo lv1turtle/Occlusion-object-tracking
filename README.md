@@ -64,6 +64,8 @@ MOT17/
     ```
     ![Untitled](https://user-images.githubusercontent.com/32154881/160889755-3b3655e7-da6f-4037-8975-6023794af0a4.png)
     ![Untitled](https://user-images.githubusercontent.com/32154881/160890340-2dbb26db-c797-4609-8109-939a7186b412.png)
+    
+  * Fourth, make the img1Depth
 
 #### Generating a dataset for cosine_metric_learning :
 * You need a gt.txt file
