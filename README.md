@@ -32,7 +32,7 @@ MOT17/
 
 * If you want to use custom datasets, see below for references.
 
-  * First, make the directory structure
+  * #### First, make the directory structure
   
     seqinfo.ini
     ```
@@ -46,14 +46,14 @@ MOT17/
       imExt=.jpg
     ```
     
-  * Second, prepare imagesets.
+  * #### Second, prepare imagesets.
 
     Form of Imageset
     ```bash
       image name : 6 digit frame number starting with 1
       e.g.) 000001.jpg ~ 000600.jpg
     ```
-  * Third, make the gt.txt with imageset
+  * #### Third, make the gt.txt & det.txt with imageset
 
     Part of the gt.txt in MOT17
     ```
@@ -62,10 +62,24 @@ MOT17/
       1,52,730,509,37,60,0,4,0.92105
       2,52,730,509,37,60,0,4,0.94737
     ```
+    The gt.txt format (Each line must contain 9 values)
     ![Untitled](https://user-images.githubusercontent.com/32154881/160889755-3b3655e7-da6f-4037-8975-6023794af0a4.png)
     ![Untitled](https://user-images.githubusercontent.com/32154881/160890340-2dbb26db-c797-4609-8109-939a7186b412.png)
     
-  * Fourth, make the img1Depth directory
+    Part of the det.txt in MOT17
+    ```
+      436,-1,696.2,429.5,72.8,285.6,0.996
+      436,-1,528.8,466.7,24.2,71.6,0.306
+      294,-1,752.6,445,65.1,198,1
+      294,-1,1517.6,430.2,241.1,461.2,1
+    ```
+    
+    The det.txt format (Each line must contain 7 values)
+    ```
+      frame id, default(-1), x,  y,  width, height, confidence score
+    ```
+    
+  * #### Fourth, generate the img1Depth from img1
   
     Using megadepth,
     Fix the lines 134 in MegaDepth/demo_images_new.py
@@ -78,11 +92,11 @@ MOT17/
         python MegaDepth/demo_images_new.py
     ```
     
-    
+## Cosine Metric Learning    
+
+pretrained model in [here](https://drive.google.com/drive/folders/13HtkxD6ggcrGJLWaUcqgXl2UO6-p4PK0)
 
 #### Generating a dataset for cosine_metric_learning :
-* You need a gt.txt file
+* prepare the gt.txt & image sets
 
-* Download MOT17 datasets
 
-* If you want custom datasets, 
