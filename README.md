@@ -16,18 +16,24 @@ The code skeleton is based on "https://github.com/tarashakhurana/detecting-invis
 MOT17/
 -- train/
 ---- seq_01/
------- img1/                 /* necessary */
------- img1Depth/   /* Can generate by using MegaDepth */
------- gt/gt.txt             /* necessary */
------- det/det.txt           /* necessary */
+------ img1/                           /* necessary */
+------ img1Depth/           /* Can generate by using MegaDepth */
+------ gt/gt.txt                       /* necessary */
+------ det/det.txt                     /* necessary */
 ------ seqinfo.ini
 ...
 -- test/
----- seq_02/
------- img1/                 /* necessary */
------- img1Depth/   /* Can generate by using MegaDepth */
------- det/det.txt           /* necessary */
+---- seq_02/  
+------ img1/                          /* necessary */
+------ img1Depth/           /* Can generate by using MegaDepth */
+------ det/det.txt                    /* necessary */
 ------ seqinfo.ini
+...
+resources/
+-- detections/
+---- seq_01.npy     /* Can generate by using ./tools/generate_detection.py */
+-- networks/
+---- mars_###.pb        /* Can generate by using cosine_metric_learning */
 ```
 
 * If you want to use custom datasets, see below for references.
@@ -78,8 +84,16 @@ MOT17/
     ```
       frame id, default(-1), x,  y,  width, height, confidence score
     ```
+  * #### Fourth, generate the img1.npy from resources/detections
+    Using ./tools/generate_detection.py
+    ```
+      python tools/generate_detections.py \
+        --model=resources/networks/mars-###.pb \
+        --mot_dir=./MOT17/train \
+        --output_dir=./resources/detections/MOT17_train
+    ```
     
-  * #### Fourth, generate the img1Depth from img1
+  * #### Fifth, generate the img1Depth from img1
   
     Using megadepth,
     Fix the lines 134 in MegaDepth/demo_images_new.py
