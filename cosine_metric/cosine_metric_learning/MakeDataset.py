@@ -213,12 +213,15 @@ def parse_args():
     parser.add_argument(
         "--display", help="Show intermediate tracking results",
         default=False, type=bool_string)
+    parser.add_argument(
+        "--object_range", help="Number of the tracked walkers",
+        default=800)
     return parser.parse_args()
 
 
 if __name__ == "__main__":
     args = parse_args()
-    for i in range(1,800) :
+    for i in range(1,args.object_range) :
       path = os.path.join(args.output_dir, '{0:0>4}'.format(i))
       if os.path.exists(path):
           continue
