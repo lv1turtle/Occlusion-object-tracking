@@ -118,10 +118,15 @@ pretrained model in [here](https://drive.google.com/drive/folders/13HtkxD6ggcrGJ
 
 #### Generating a dataset for cosine_metric_learning :
 * prepare the gt.txt & image sets
-
-  * file format : [#ID][#tracklets][#bboxes][#distractors][#caml./ID]
-  * folder format : object class
-  * file info : extracted bbox_images
+  ```bash
+      file format : [#ID][#tracklets][#bboxes][#distractors][#caml./ID]
+  ```
+  ```bash
+      folder format : object class
+  ```
+  ```bash
+      file info : extracted bbox_images
+  ```
   
  By using the makedet.py, we can extract datasets from image sets
  
