@@ -119,4 +119,6 @@ pretrained model in [here](https://drive.google.com/drive/folders/13HtkxD6ggcrGJ
 #### Generating a dataset for cosine_metric_learning :
 * prepare the gt.txt & image sets
 
+  * file format : [#ID][#tracklets][#bboxes][#distractors][#caml./ID]
+
 
