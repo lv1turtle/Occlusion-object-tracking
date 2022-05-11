@@ -1,6 +1,7 @@
 # Occlusion-object-tracking
 We are developing it with reference to [[Detecting Invisible People](https://github.com/tarashakhurana/detecting-invisible-people)] & [[MegaDepth](https://github.com/zhengqili/MegaDepth)] & [[Deep Sort](https://github.com/nwojke/deep_sort)]
 
+## detecting-invisible-people
 The code skeleton is based on "https://github.com/tarashakhurana/detecting-invisible-people"
 
 #### Dependencies:
@@ -88,10 +89,11 @@ resources/
     Using ./tools/generate_detection.py
     ```
       python tools/generate_detections.py \
-        --model=resources/networks/mars-###.pb \
+        --model=resources/networks/mars-0000.pb \
         --mot_dir=./MOT17/train \
         --output_dir=./resources/detections/MOT17_train
     ```
+    #### generate mars-0000.pb by using [Cosine Metric Learning](#cosine-metric-learning) <br><br>
     
   * #### Fifth, generate the img1Depth from img1
   
@@ -105,7 +107,11 @@ resources/
     ```bash
         python MegaDepth/demo_images_new.py
     ```
-    
+  * #### Sixth, run deep_sort_app.py
+    ```bash
+        bash run_forecast_filtering.sh
+    ```
+
 ## Cosine Metric Learning    
 
 pretrained model in [here](https://drive.google.com/drive/folders/13HtkxD6ggcrGJLWaUcqgXl2UO6-p4PK0)
