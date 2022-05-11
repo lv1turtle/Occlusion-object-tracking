@@ -120,5 +120,11 @@ pretrained model in [here](https://drive.google.com/drive/folders/13HtkxD6ggcrGJ
 * prepare the gt.txt & image sets
 
   * file format : [#ID][#tracklets][#bboxes][#distractors][#caml./ID]
-
+  * folder format : object class
+  * file info : extracted bbox_images
+  
+ By using the makedet.py, we can extract datasets from image sets
+ 
+ 
+ 
 
