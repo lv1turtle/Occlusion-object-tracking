@@ -98,7 +98,7 @@ resources/
   * #### Fifth, generate the img1Depth from img1
   
     Using megadepth,
-    Fix the lines 134 in MegaDepth/demo_images_new.py
+    Fix the lines 134 in [MegaDepth](https://github.com/zhengqili/MegaDepth)/demo_images_new.py
     ```bash
         images = sorted(glob.glob( " path of img1/*.jpg " ))
     ```
