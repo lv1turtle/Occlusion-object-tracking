@@ -1,0 +1,1 @@
+python train_mars.py --mode=freeze --restore_path=./output/train2/cosine-softmax/model.ckpt-2345360
